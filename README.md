@@ -14,7 +14,7 @@ An advanced application for learning to draw using exclusively Google's Gemini A
 ## How It Works
 
 1. User uploads an image and selects a difficulty level
-2. The app uses Gemini Nano to generate a pencil sketch of the main object
+2. The app uses Nano-banana model to generate a pencil sketch of the main object
 3. A step-by-step tutorial is generated with the appropriate complexity level
 4. Each step includes visual guidance and audio narration
 5. Users can navigate through steps at their own pace
