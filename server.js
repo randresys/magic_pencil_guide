@@ -169,7 +169,7 @@ Create a black and white pencil drawing that shows ONLY the progress for this sp
 async function analyzeImage(imagePath) {
   try {
     // Use gemini-1.5-flash for image analysis
-    const visionModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const visionModel = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     
     const imageBase64 = imageToBase64(imagePath);
     
@@ -201,7 +201,7 @@ async function analyzeImage(imagePath) {
 // Function to generate the text for the next drawing step with improved educational approach for children
 async function generateNextStepText(referenceImageData, previousStepsImagesData, currentStepNumber, totalSteps) {
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const prompt = `You are a patient and encouraging art teacher teaching children how to draw step by step.
     
@@ -324,7 +324,7 @@ async function generatePencilSketchFromImage(imagePath, difficulty) {
 // Function to determine the optimal number of steps based on image complexity
 async function determineOptimalSteps(referenceImageData, imageDescription) {
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     
     const prompt = `Analyze this image and its description to determine the optimal number of steps for a children's drawing tutorial.
     
@@ -367,7 +367,7 @@ Return ONLY the number of steps as a single integer.`;
 // Function to generate a structured plan for the drawing tutorial
 async function generateTutorialPlan(referenceImageData, imageDescription, totalSteps) {
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     
     const prompt = `Create a structured plan for teaching children to draw this image in ${totalSteps} steps.
     

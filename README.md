@@ -22,7 +22,7 @@ An advanced application for learning to draw using exclusively Google's Gemini A
 ## Technology Stack
 
 - **Backend**: Node.js with Express
-- **AI Models**: gemini-1.5-flash, gemini-2.5-flash-image-preview
+- **AI Models**: gemini-2.5-flash, gemini-2.5-flash-image-preview
 - **Frontend**: HTML, CSS, JavaScript
 - **APIs**: Google Generative AI SDK
 
