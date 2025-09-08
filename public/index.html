@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Tutorial with Gemini</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Drawing Tutorial with Gemini</h1>
+            <p>Learn to draw anything with AI-powered step-by-step tutorials</p>
+        </header>
+
+        <main>
+            <!-- Upload Section -->
+            <section id="upload-section" class="section">
+                <h2>Upload Your Image</h2>
+                <form id="upload-form">
+                    <div class="form-group">
+                        <label for="image">Select an image:</label>
+                        <input type="file" id="image" name="image" accept="image/*" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="difficulty">Select difficulty level:</label>
+                        <select id="difficulty" name="difficulty" required>
+                            <option value="">-- Choose difficulty --</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" id="generate-btn">Generate Tutorial</button>
+                </form>
+                
+                <div id="loading" class="loading hidden">
+                    <p>Generating your drawing tutorial...</p>
+                    <div class="spinner"></div>
+                </div>
+            </section>
+
+            <!-- Tutorial Section -->
+            <section id="tutorial-section" class="section hidden">
+                <div class="tutorial-header">
+                    <h2>Drawing Tutorial</h2>
+                    <button id="new-tutorial-btn">Create New Tutorial</button>
+                </div>
+                
+                <!-- Sketch Preview -->
+                <div id="sketch-preview" class="sketch-preview">
+                    <h3>Reference Sketch</h3>
+                    <div class="content">
+                        <div class="image-placeholder">
+                            <p>Reference sketch will appear here</p>
+                        </div>
+                        <div class="description">
+                            <p id="sketch-description"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Steps Navigation -->
+                <div class="steps-navigation">
+                    <button id="prev-step" class="nav-btn" disabled>← Previous</button>
+                    <span id="step-indicator">Step 1 of 0</span>
+                    <button id="next-step" class="nav-btn" disabled>Next →</button>
+                </div>
+                
+                <!-- Current Step -->
+                <div id="current-step" class="current-step">
+                    <h3 id="step-title">Step 1</h3>
+                    <div class="content">
+                        <div class="image-placeholder">
+                            <p>Drawing step will appear here</p>
+                        </div>
+                        <div class="description">
+                            <p id="step-description"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by Google Gemini AI</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
