@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: magic-pencil-guide
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        value: ""
